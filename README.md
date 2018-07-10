@@ -29,6 +29,8 @@ In this project the goal is to use a custom svm classifier and not the cv2.HOGDe
 Now we have to train an SVM classifier. OpenCV provides its own implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the SVC (support vector classifier) class in the scikit-learn library, a very popular machine learning package. Find the documentation here: http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 
 %% Pickle Trick %% 
+
+
 Since the process of training involves reading up to 5000 pictures and extracting their features, it will take time and ofcourse something about 1.5 GB of your RAM. So we will train our classifier only once and save it with the pickle library and load the file for other times.
 
 ** SetSVMDetector **
