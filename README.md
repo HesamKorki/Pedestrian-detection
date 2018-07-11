@@ -20,7 +20,7 @@
 
 First things first; in this project we will use the INRIA person dataset for both training and testing, but after training our classifier we can test it on other pictures to. You need to download the dataset from its official website here: 
 
-👉[INRIA PERSON DATASET](http://pascal.inrialpes.fr/data/human/)
+[INRIA PERSON DATASET](http://pascal.inrialpes.fr/data/human/)
 
 - The positive images are extracted from the original images and located (in two different sizes) in directories starting with the patch size (96X160H96, etc.).
 
@@ -36,7 +36,7 @@ First things first; in this project we will use the INRIA person dataset for bot
 
 You can find the official documentation here:
 
-👉[HoG Descriptor](https://docs.opencv.org/3.4.1/d5/d33/structcv_1_1HOGDescriptor.html)
+[HoG Descriptor](https://docs.opencv.org/3.4.1/d5/d33/structcv_1_1HOGDescriptor.html)
 
 In order to set the conductor parameter of HoGDescriptor, we will create an XML file.
 
@@ -48,7 +48,7 @@ In this project, the goal is to use a custom SVM classifier and not ~~the cv2.HO
 
 Now we have to train a SVM classifier. OpenCV provides its implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the `SVC (support vector classifier)` class in the scikit-learn library, a very popular machine learning package. Find the documentation here:
 
-👉[SVC from scikit.svm](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
+[SVC from scikit.svm](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
 
 
 ### **Pickle Trick** 
@@ -79,7 +79,7 @@ HOG.setSVMDetector(np.array(supportvectors, dtype=np.float64))
 
 We will use class `HOG.detectMultiScale()` in order to get a moveable window through our test image and different scales of our test image. The whole information you need to deal with to comprehend its parameters and functionality is mentioned here: 
 
-👉[HoG.Multiscale() parameters](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
+[HoG.Multiscale() parameters](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
 
 *Had you have any further questions, you are welcome to ask me* 
 
