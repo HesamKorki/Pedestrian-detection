@@ -2,14 +2,14 @@
 
 #### **Using python 2.7 and opencv 3**
 
-Welcome to my repository of Pedestrian Detection. We will use #INRIA, #SVC, #HoG, #NMS in this project.
+*Welcome to my repository of Pedestrian Detection. We will use #INRIA, #SVC, #HoG, #NMS in this project.*
 All the rights of this project are for Hesam Korki, and a Special thanks to Dr.Nasihatkon from KNTU
 #Contact me: Hesam.korki@gmail.com
 #Classified with the score of 0.95 
 
 ## **Goals**
-1. Compute HoG features from images of a given data set, and extract image patches (both positive and negative examples).
-2. Train an SVM classifier to perform classification and detection tasks.
+*1. Compute HoG features from images of a given data set, and extract image patches (both positive and negative examples).*
+*2. Train an SVM classifier to perform classification and detection tasks.*
 
 ## **DATASET**
 
@@ -40,12 +40,12 @@ Since the process of training involves reading up to 5000 pictures and extractin
 
 Now that we have our support vector, we can easily set our svmdetector using the class 'HOG.setSVMDetector'.
 
-## --Testing and drawing a box around pedestrians-- 
+## **Testing and drawing a box around pedestrians** 
 
 We will use class 'HOG.detectMultiScale' in order to get a moveable window through our test image and different scales of our test image. The whole information you need to deal with to comprehend its parameters and functionality is mentioned here: 
 https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
 
-Had you have any further questions, you are welcome to ask me 
+*Had you have any further questions, you are welcome to ask me 
 #Email: Hesam.korki@gmail.com
 Hope that you find this helpful.
-Best Regards Hesam Korki
+Best Regards Hesam Korki*
