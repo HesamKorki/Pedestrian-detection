@@ -15,7 +15,10 @@ All the rights of this project are for Hesam Korki, and a Special thanks to Dr.N
 
 ## **DATASET**
 
-First things first in this project we will use the INRIA person dataset for both training and testing, but after training our classifier we can test it on other pictures to. You need to download the dataset from its official website here: >http://pascal.inrialpes.fr/data/human/
+First things first in this project we will use the INRIA person dataset for both training and testing, but after training our classifier we can test it on other pictures to. You need to download the dataset from its official website here: 
+
+>http://pascal.inrialpes.fr/data/human/
+
 1-The positive images are extracted from the original images and located (in two different sizes) in directories starting with the patch size (96X160H96, etc.).
 2- According to the webpage, you should only use the 64x128 central part of these images. The reason why the pictures have been widened in both width and height is brought on the page.
 3-Dividing the dataset to Train and Test are up to you. Although dataset providers seem to have fixed this, you are free to choose any portion of the dataset for training and the rest for testing.
