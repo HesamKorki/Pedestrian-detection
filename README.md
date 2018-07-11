@@ -30,14 +30,19 @@ First things first in this project we will use the INRIA person dataset for both
 
 ## **HoG Descriptor**
 
-You can find the official documentation here: https://docs.opencv.org/3.4.1/d5/d33/structcv_1_1HOGDescriptor.html
+You can find the official documentation here:
+
+>https://docs.opencv.org/3.4.1/d5/d33/structcv_1_1HOGDescriptor.html
+
 In order to set the conductor parameter of HoGDescriptor, we will create an XML file.
-After reading images and extracting their features with the 'compute' class, append them to an empty list and give the label of 1 to those including pedestrian in them and 0 to those not including pedestrians.
+After reading images and extracting their features with the `HoG.compute()` class, append them to an empty list and give the label of 1 to those including pedestrian in them and 0 to those not including pedestrians.
 
 ## **Training our SVM**
 
 In this project, the goal is to use a custom SVM classifier and not ~~the cv2.HOGDescriptor_getDefaultPeopleDetector()~~, and that is the meaning of training.
-Now we have to train an SVM classifier. OpenCV provides its implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the SVC (support vector classifier) class in the scikit-learn library, a very popular machine learning package. Find the documentation here: http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+Now we have to train an SVM classifier. OpenCV provides its implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the `SVC (support vector classifier)` class in the scikit-learn library, a very popular machine learning package. Find the documentation here:
+
+>http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 
 ### **Pickle Trick** 
 
@@ -51,7 +56,8 @@ Now that we have our support vector, we can easily set our svmdetector using the
 ## **Testing and drawing a box around pedestrians** 
 
 We will use class 'HOG.detectMultiScale' in order to get a moveable window through our test image and different scales of our test image. The whole information you need to deal with to comprehend its parameters and functionality is mentioned here: 
-https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
+
+>https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
 
 *Had you have any further questions, you are welcome to ask me 
 #Email: Hesam.korki@gmail.com
