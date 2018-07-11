@@ -4,8 +4,11 @@
 
 *Welcome to my repository of Pedestrian Detection. We will use #INRIA, #SVC, #HoG, #NMS in this project.*
 All the rights of this project are for Hesam Korki, and a Special thanks to Dr.Nasihatkon from KNTU
-#Contact me: Hesam.korki@gmail.com
-#Classified with the score of 0.95 
+
+>*Contact me: Hesam.korki@gmail.com*
+
+*Classified with the score of 0.95* 
+
 
 ## **Goals**
 
