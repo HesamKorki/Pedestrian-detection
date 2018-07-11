@@ -3,7 +3,8 @@
 #### **Using python 2.7 and opencv 3**
 
 *Welcome to my repository of Pedestrian Detection. We will use #INRIA, #SVC, #HoG, #NMS in this project.*
-All the rights of this project are for Hesam Korki, and a Special thanks to Dr.Nasihatkon from KNTU
+
+```All the rights of this project are for Hesam Korki, and a Special thanks to Dr.Nasihatkon from KNTU```
 
 >*Contact me: Hesam.korki@gmail.com*
 
