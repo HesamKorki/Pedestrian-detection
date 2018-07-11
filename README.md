@@ -59,9 +59,9 @@ We will use class `HOG.detectMultiScale()` in order to get a moveable window thr
 
 >[HoG.Multiscale() parameters](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
 
-*Had you have any further questions, you are welcome to ask me 
+*Had you have any further questions, you are welcome to ask me* 
 
 >Email: Hesam.korki@gmail.com
 
-Hope that you find this helpful.
+*Hope that you find this helpful.
 Best Regards Hesam Korki*
