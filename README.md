@@ -39,23 +39,41 @@ You can find the official documentation here:
 >[HoG Descriptor](https://docs.opencv.org/3.4.1/d5/d33/structcv_1_1HOGDescriptor.html)
 
 In order to set the conductor parameter of HoGDescriptor, we will create an XML file.
+
 After reading images and extracting their features with the `HoG.compute()` class, append them to an empty list and give the label of 1 to those including pedestrian in them and 0 to those not including pedestrians.
 
 ## **Training our SVM**
 
 In this project, the goal is to use a custom SVM classifier and not ~~the cv2.HOGDescriptor_getDefaultPeopleDetector()~~, and that is the meaning of training.
-Now we have to train an SVM classifier. OpenCV provides its implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the `SVC (support vector classifier)` class in the scikit-learn library, a very popular machine learning package. Find the documentation here:
+
+Now we have to train a SVM classifier. OpenCV provides its implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the `SVC (support vector classifier)` class in the scikit-learn library, a very popular machine learning package. Find the documentation here:
 
 >[SVC from scikit.svm](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
+
 
 ### **Pickle Trick** 
 
 
-Since the process of training involves reading up to 5000 pictures and extracting their features, it will take time and of course something about 1.5 GB of your RAM. So we will train our classifier only once and save it with the pickle library and load the file for other times.
+Since the process of training involves reading up to 5000 pictures and extracting their features, it will take time and of course something about 1.5 GB of your RAM.
+
+So we will train our classifier only once and save it with the pickle library and load the file for other times.
 
 ## **SetSVMDetector**
 
-Now that we have our support vector, we can easily set our svmdetector using the class 'HOG.setSVMDetector'.
+Now that we have our support vector, we can easily set our svmdetector using the class `HOG.setSVMDetector()`.
+
+*One crucial fact about OpenCV’s SVM detector is that it takes the SVM parameters in the following order:*
+
+*the coefficients of support vectors machine followed by the intercept (constant) of the model.*
+
+So it has to be like this: 
+```
+supportvectors.append(np.dot(svm.dual_coef_,svm.support_vectors_)[​0​])
+supportvectors.append([svm.intercept_])
+supportvectors = list(itertools.chain(*supportvectors))
+#passing the model params to HOG
+HOG.setSVMDetector(np.array(supportvectors, dtype=np.float64))
+```
 
 ## **Testing and drawing a box around pedestrians** 
 
