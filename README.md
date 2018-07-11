@@ -12,9 +12,9 @@ All the rights of this project are for Hesam Korki, and a Special thanks to Dr.N
 
 ## **Goals**
 
-*- Compute HoG features from images of a given data set, and extract image patches (both positive and negative examples).*
+- *Compute HoG features from images of a given data set, and extract image patches (both positive and negative examples).*
 
-*- Train an SVM classifier to perform classification and detection tasks.*
+- *Train an SVM classifier to perform classification and detection tasks.*
 
 ## **DATASET**
 
