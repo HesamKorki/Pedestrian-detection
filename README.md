@@ -17,8 +17,8 @@ First things first in this project we will use the INRIA person dataset for both
 1-The positive images are extracted from the original images and located (in two different sizes) in directories starting with the patch size (96X160H96, etc.).
 2- According to the webpage, you should only use the 64x128 central part of these images. The reason why the pictures have been widened in both width and height is brought on the page.
 3-Dividing the dataset to Train and Test are up to you. Although dataset providers seem to have fixed this, you are free to choose any portion of the dataset for training and the rest for testing.
-4-Negative images are not provided in 64x128 patches. Read the documentation for details onhowtobuildnegativepatchesfromnegativeimagesprovided. Building the negative data is all up to you.
-We will get random 64*128 windows for the negative samples.
+4-Negative images are not provided in 64x128 patches. Read the documentation for details on how to build negative patches from negative images provided. Building the negative data is all up to you.
+**_We will get random 64*128 windows for the negative samples._**
 
 ## **HoG Descriptor**
 
@@ -28,7 +28,7 @@ After reading images and extracting their features with the 'compute' class, app
 
 ## **Training our SVM**
 
-In this project, the goal is to use a custom SVM classifier and not the cv2.HOGDescriptor_getDefaultPeopleDetector(), and that is the meaning of training.
+In this project, the goal is to use a custom SVM classifier and not ~~the cv2.HOGDescriptor_getDefaultPeopleDetector()~~, and that is the meaning of training.
 Now we have to train an SVM classifier. OpenCV provides its implementation of SVM. But since OpenCV’s SVM is not properly documented, we will be using the SVC (support vector classifier) class in the scikit-learn library, a very popular machine learning package. Find the documentation here: http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 
 ### **Pickle Trick** 
