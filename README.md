@@ -8,7 +8,7 @@
 
 *Classified with the score of 0.95* 
 
-*All the rights of this project are for Hesam Korki, and a Special thanks to Dr.Nasihatkon from KNTU*
+*All the rights of this project are reserved for Hesam Korki*
 
 ## **Goals**
 
