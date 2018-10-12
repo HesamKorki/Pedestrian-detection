@@ -1,4 +1,4 @@
-# **Pedestrian-detection**
+# **Pedestrian Detection**
 
 #### **Using python 2.7 and opencv 3**
 
